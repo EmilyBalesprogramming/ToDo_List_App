@@ -58,7 +58,28 @@ function getInput(id):HTMLInputElement{
  */
 
 function displayToDoItem(item:ToDoItem): void{
+    let itemText = document.createElement("h3");
+    itemText.innerText = item.title;
 
+    let itemDate = document.createElement("p");
+    itemDate.innerText = item.dueDate.toDateString();
+
+    let itemDiv = document.createElement("div");
+    if(item.isCompleted){
+        itemDiv.classList.add("completed");
+    }
+
+    itemDiv.appendChild(itemText);
+    itemDiv.appendChild(itemDate);
+
+    if(item.isCompleted){
+        let completedToDos = document.getElementById("CompletedItems");
+        completedToDos.appendChild(itemDiv);
+    }
+    else{
+        let incompleteToDos = document.getElementById("IncompleteItems");
+        incompleteToDos.appendChild(itemDiv);
+    }
 }
 
 // Task: Allow user to mark a ToDoItem as completed

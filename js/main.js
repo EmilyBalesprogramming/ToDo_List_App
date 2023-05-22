@@ -30,4 +30,22 @@ function getInput(id) {
     return document.getElementById(id);
 }
 function displayToDoItem(item) {
+    var itemText = document.createElement("h3");
+    itemText.innerText = item.title;
+    var itemDate = document.createElement("p");
+    itemDate.innerText = item.dueDate.toDateString();
+    var itemDiv = document.createElement("div");
+    if (item.isCompleted) {
+        itemDiv.classList.add("completed");
+    }
+    itemDiv.appendChild(itemText);
+    itemDiv.appendChild(itemDate);
+    if (item.isCompleted) {
+        var completedToDos = document.getElementById("CompletedItems");
+        completedToDos.appendChild(itemDiv);
+    }
+    else {
+        var incompleteToDos = document.getElementById("IncompleteItems");
+        incompleteToDos.appendChild(itemDiv);
+    }
 }

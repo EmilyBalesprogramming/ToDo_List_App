@@ -5,6 +5,7 @@
     padding: .5em;
     border-radius: .75em;
     margin: 1em;
+    cursor: pointer;
 }
 
 .todo h3{

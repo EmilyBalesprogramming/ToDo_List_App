@@ -12,19 +12,45 @@ item.dueDate = new Date(2023, 5, 20);
 item.isCompleted = false;
 */
 
+window.onload = function(){
+    let addItem = document.getElementById("Add");
+    addItem.onclick = main;
+}
+
+function main(){
+    if(isValid()){
+        let item = getToDoItem();
+        displayToDoItem(item);
+    }
+}
 /**
  * Check form data is valid
  */
 function isValid(): boolean{
-
+    return true;
 }
 
 /**
  * Get all inout off form and wrap in
  * a ToDoItem object
  */
-function getToDoitem(): ToDoItem{
+function getToDoItem(): ToDoItem{
+    let myItem = new ToDoItem();
 
+    let titleInput = getInput("title");
+    myItem.title = titleInput.value
+
+    let dueDateInput = getInput("dueDate");
+    myItem.dueDate = new Date(dueDateInput.value);
+
+    let isCompleted = getInput("isCompleted");
+    myItem.isCompleted = isCompleted.checked;
+
+    return myItem;
+}
+
+function getInput(id):HTMLInputElement{
+    return <HTMLInputElement>document.getElementById(id);
 }
 /**
  * 

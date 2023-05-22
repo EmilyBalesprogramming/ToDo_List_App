@@ -18,4 +18,12 @@
 .completed{
    opacity: 35%; 
    background-color: lightgreen;
+   text-decoration: line-through;
+}
+#CompletedItems{
+    border: .2em solid yellow;
+}
+#IncompleteItems{
+    border: .2em solid red ;
+    margin-bottom: 1em;
 }

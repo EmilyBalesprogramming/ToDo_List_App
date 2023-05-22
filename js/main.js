@@ -4,6 +4,13 @@ var ToDoItem = (function () {
     return ToDoItem;
 }());
 window.onload = function () {
+    var todoString = JSON.stringify(ToDoItem);
+    localStorage.setItem("ToDoObject", todoString);
+    var todoResult = localStorage.getItem("ToDoObject");
+    var myToDoList = JSON.parse(todoResult);
+    console.log(myToDoList);
+};
+window.onload = function () {
     var addItem = document.getElementById("Add");
     addItem.onclick = main;
 };

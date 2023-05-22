@@ -5,6 +5,16 @@ class ToDoItem{
 
    
 }
+window.onload = function(){
+   
+    let todoString = JSON.stringify(ToDoItem);
+    localStorage.setItem("ToDoObject", todoString);
+
+    let todoResult = localStorage.getItem("ToDoObject");
+    let myToDoList:ToDoItem = JSON.parse(todoResult);
+    console.log(myToDoList);
+}
+
 /*
 let item = new ToDoItem();
 item.title = "testing";

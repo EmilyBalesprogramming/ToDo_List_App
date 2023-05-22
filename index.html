@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo List</title>
+    <link href="dist/rome.css" rel="stylesheet">
 </head>
 <body>
     <h1>ToDo List</h1>
@@ -13,8 +14,8 @@
     <span>*</span>
     <br>
 
-    <label for="Due Date"></label>
-    <input type="text" id="dueDate">
+    <label for="Due Date">Due Date</label>
+    <input type="date" id="dueDate">
     <span>*</span>
     <br>
 
@@ -23,5 +24,17 @@
     <br>
 
     <input type="button" value="Add ToDo Item">
+
+   
+
+    <script src="dist/rome.js"></script> 
+    <script>
+    rome(dt,options);
+    const opitons = {
+        min:(new Date())
+    }
+    
+    
+    </script>
 </body>
 </html>

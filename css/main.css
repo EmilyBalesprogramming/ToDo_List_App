@@ -21,9 +21,64 @@
    text-decoration: line-through;
 }
 #CompletedItems{
-    border: .2em solid yellow;
+    border: .2em solid darkgreen;
 }
 #IncompleteItems{
-    border: .2em solid red ;
+    border: .2em solid darkmagenta ;
     margin-bottom: 1em;
+}
+input[type=text]{
+    margin-left: 50%;
+    background-color: rgb(255, 182, 246);
+    margin-top: .2em;
+    margin-bottom: .25em;
+}
+input[type=date]{
+    margin-left: 50%;
+    background-color: rgb(255, 182, 246);
+    color: rgb(90, 31, 119);
+    margin-top: .2em;
+    margin-bottom: .25em;
+}
+input[type=checkbox]{
+    margin-left: 60%;
+    
+
+}
+input[type=button]{
+    margin-left: 50%;
+    background-color: rgb(255, 182, 246);
+    color: rgb(90, 31, 119);
+    padding: .5em;
+    margin-top: .3em;
+}
+label{
+    margin-left: 50%;
+    display: inline-block;
+    color:  rgb(90, 31, 119);
+    text-align: right;
+}
+h1{
+    margin-left: 50%;
+    color:  rgb(90, 31, 119);
+}
+@media(max-width: 600px) {
+    label{
+        margin-left:20%;
+    }
+    input[type=checkbox]{
+        margin-left: 20%;
+    }
+    input[type=button]{
+        margin-left: 20%;
+    }
+    input[type=text]{
+        margin-left: 2%;
+    }
+    input[type=date]{
+        margin-left: 2%;
+    }
+    h1{
+        margin-left: 20%;
+    }
 }
